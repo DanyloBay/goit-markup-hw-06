@@ -463,9 +463,14 @@ img {
     max-width: 448px;
 }
 
-.form__check input
+.form__check .checkbox
 {
     margin-right: 9px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .form__check label
@@ -476,7 +481,39 @@ img {
     letter-spacing: 0.03em;
 }
 
+.checkbox
+{
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
 
+    position: absolute;
+}
+
+.checkbox:checked + .check__icon
+{
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+    background-image: url(../images/check.svg);
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.check__icon
+{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+}
+
+.policy__link
+{
+    color: var(--second-color)
+}
 
 .modal__btn
 {
@@ -508,6 +545,8 @@ img {
 {
     position: relative;
     width: 100%;
+
+    color: var(--main-color);
 }
 
 .form__input
@@ -543,13 +582,14 @@ img {
     height: 12px;
     transform: translate(-50%, -50%);
 
-    fill: var(--main-color);
+    fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-.form__icon:hover
+.form__item:hover .form__icon
 {
-    fill: var(--second-icon-color);
+    color: var(--second-color);
 }
 
 /* Section */
