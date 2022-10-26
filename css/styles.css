@@ -587,8 +587,12 @@ img {
     
 }
 
-.form__item:hover .form__icon,
-.form__item:focus .form__icon
+.form__item:hover .form__icon
+{
+    color: var(--second-color);
+}
+
+.form__input:focus + .form__icon
 {
     color: var(--second-color);
 }
