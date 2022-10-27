@@ -340,7 +340,7 @@ img {
 .modal {
     max-width: 528px;
     min-height: 581px;
-    padding: 15px;
+    padding: 40px;
 
     background-color: var(--white);
 
@@ -360,23 +360,31 @@ img {
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
+    color: var(--black);
+
     position: absolute;
     top: 8px;
     right: 8px;
+
+
+}
+
+.modal__item:hover .modal__close__icon,
+.modal__item:focus-visible .modal__close__icon
+{
+    color: var(--second-icon-color);
 }
 
 .modal__close__icon {
     width: 11px;
     height: 11px;
-    fill: var(--black);
+    fill: currentColor;
 }
 
 .modal__tittle
 {
     margin-bottom: 12px;
-    margin-top: 12px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-top: 0px;
     padding: 0;
     font-weight: 700;
     font-size: 20px;
@@ -400,11 +408,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
 
-    margin-left: 40px;
-    margin-right: 40px;
     margin-bottom: 10px;
-
-    max-width: 448px;
 }
 
 .form__field label
@@ -427,7 +431,6 @@ img {
     letter-spacing: 0.01em;
     color: var(--main-text-color);
 
-    margin-bottom: 10px;
     padding: 12px 16px;
     width: 100%;
     height: 120px;
@@ -451,30 +454,29 @@ img {
     color: var(--placeholder-color);
 }
 
+.form__area
+{
+    margin-bottom: 20px;
+}
+
 .form__check
 {
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    margin-left: 40px;
-    margin-right: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
     margin-bottom: 30px;
-
-    max-width: 448px;
 }
 
 .form__check .checkbox
 {
     margin-right: 9px;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-}
-
-.form__check label
-{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -587,14 +589,10 @@ img {
     
 }
 
-.form__item:hover .form__icon
+.form__item:hover .form__icon,
+.form__input:focus-visible + .form__icon
 {
-    color: var(--second-color);
-}
-
-.form__input:focus + .form__icon
-{
-    color: var(--second-color);
+    color: var(--second-icon-color);
 }
 
 /* Section */
@@ -970,6 +968,11 @@ img {
 .footer {
     padding: 60px 0;
     background-color: var(--background-color);
+}
+
+.footer__first
+{
+    flex-grow: 1;
 }
 
 .footer__secart {
